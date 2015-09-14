@@ -16,9 +16,9 @@ curl unzip gzip git cmake
 RUN apt-get update
 
 ## Set CXXFLAGS and CFLAGS for gcc to use SSE4.1
-ENV CXXFLAGS "-O2 -g march=corei7"
+ENV CXXFLAGS "-O3 -g march=corei7"
 
 ## Download VG and its git dependencies
 RUN git clone --recursive https://github.com/ekg/vg.git /home/vg
 RUN cd /home/vg; make
-
+RUN ln -s "/home/vg/vg" "/usr/bin/vg"
