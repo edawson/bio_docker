@@ -2,6 +2,7 @@
 ## Use a base ubuntu install
 FROM ubuntu:trusty
 MAINTAINER erictdawson
+LABEL "tag"="vg
 
 ## Download dependencies for vg, pretty standard fare
 #RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
@@ -31,6 +32,6 @@ ENV CXXFLAGS "$CXXFLAGS -march=corei7 -mavx"
 
 ## Download VG and its git dependencies
 RUN git clone --recursive https://github.com/ekg/vg.git /home/vg
-ADD ./Makefile /home/vg/Makefile
-RUN cd /home/vg; make
-RUN ln -s "/home/vg/vg" "/usr/bin/vg"
+#COPY ./Makefile /home/vg/Makefile
+#RUN cd /home/vg; make
+#RUN ln -s "/home/vg/vg" "/usr/bin/vg"
