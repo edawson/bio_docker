@@ -4,7 +4,7 @@ Eric T Dawson
 October 2015
 
 ## What is it?  
-The bio\_docker report contains a number of
+The bio\_docker repository contains a number of
 directories. Each directory contains a build file for the
 relevant bioinformatics tool that is wrapped by the Dockerfile in
 that directory.
