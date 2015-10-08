@@ -3,6 +3,7 @@ MAINTAINER Eric T Dawson
 LABEL "tag"="delly_d"
 LABEL "version"="0.1"
 
+## Make sure to install zlib and libbz2, though only libbz2 may be necessary.
 RUN apt-get update && apt-get install -y \
     git \
     make \
